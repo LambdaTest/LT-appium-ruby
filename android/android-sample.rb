@@ -17,7 +17,7 @@ require 'appium_lib'
         appium_driver = Appium::Driver.new({
             'caps' => caps,
             'appium_lib' => {
-                :server_url => "https://#{username}:#{accessToken}@beta-hub.lambdatest.com/wd/hub"
+                :server_url => "https://#{username}:#{accessToken}@mobile-hub.lambdatest.com/wd/hub"
             }}, true)
  
             driver = appium_driver.start_driver
