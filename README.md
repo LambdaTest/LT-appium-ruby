@@ -140,6 +140,11 @@ Once you are done with the above-mentioned steps, you can initiate your first Ru
 
 You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url (generated earlier) along with other capabilities like build name and test name via capabilities object. The capabilities object in the sample code are defined as:
 
+**Info Note:**
+
+- In case you're using the Capabilities using the JSON Wire Protocol, then please use appium_lib version 10.6.0 and below.
+- Install it using ```gem install appium_lib -v 10.6.0``` command.
+
 <Tabs className="docs__val">
 
 <TabItem value="ios-config" label="iOS" default>
