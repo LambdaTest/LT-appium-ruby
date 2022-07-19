@@ -6,18 +6,20 @@ require 'appium_lib'
  
         caps = {     
             "LT:Options" => {      
-                "deviceName" => "iPhone 13 Pro",  
-                "platformName" => "iOS",
-                "platformVersion" => "15",
-                "isRealMobile" => true,
-                "app" => "YOUR_APP_URL",
-                "w3c" => true,
+                :deviceName => "iPhone 13 Pro",  
+                :platformName => "iOS",
+                :platformVersion => "15",
+                :build => "Ruby Vanilla - iOS",
+                :name => "Ruby iOS Test",
+                :isRealMobile => true,
+                :app => "YOUR_APP_URL", #Enter the App URL here
+                :w3c => true,
         } }
 
         appium_driver = Appium::Driver.new({
             'caps' => caps,
             'appium_lib' => {
-                :server_url => "https://#{username}:#{accessToken}@mobile-hub.lambdatest.com/wd/hub"
+                :server_url => "http://"+username+":"+accessToken+"@mobile-hub.lambdatest.com/wd/hub"
             }}, true)
  
             driver = appium_driver.start_driver

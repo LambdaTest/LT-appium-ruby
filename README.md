@@ -202,7 +202,7 @@ cd ios
 Execute the following command to run your test on LambdaTest platform:
 
 ```bash
-bundle exec rake first
+ruby ios-sample.rb
 ```
 
 </TabItem>
@@ -220,12 +220,37 @@ cd android
 Execute the following command to run your test on LambdaTest platform:
 
 ```bash
-bundle exec rake first
+ruby android-sample.rb
 ```
 
 </TabItem>
 
 </Tabs>
+
+**Info Note**
+In case of Windows, if you get any error message. Please try this method:
+
+1. Navigate to the corresponding directory based on your app.
+
+```bash
+cd android
+```
+2. Refresh the gem bundles through given command
+
+```bash
+gem uninstall -aIx
+```
+3. Re-install the gems required
+
+```bash
+gem install appium_lib -v 10.6.0
+gem install ffi
+```
+4. Now try running the corresponding automation script for your app.
+
+```bash
+ruby android-sample.rb
+```
 
 **Info:** Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on the :link: [LambdaTest App Automation Dashboard](https://appautomation.lambdatest.com/build).
 
