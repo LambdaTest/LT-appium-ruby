@@ -9,6 +9,7 @@ require 'appium_lib'
                 :deviceName => "OnePlus 7",  
                 :platformName => "Android",
                 :platformVersion => "9",
+                :build => "Ruby Vanilla - Android",
                 :name => "Ruby Android Test",
                 :isRealMobile => true,
                 :app => "YOUR_APP_URL", #Enter the App URL here
