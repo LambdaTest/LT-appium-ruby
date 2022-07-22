@@ -52,11 +52,6 @@ Before you can start performing Ruby automation testing with Selenium, you would
     brew install ruby
     ```
 
-- Ensure you have Dependency manager **bundler** installed. If not installed, you can install with the following command -
-
-  ```
-  gem install bundler
-  ```
 
 ### Clone The Sample Project
 
@@ -156,7 +151,7 @@ You can update your custom capabilities in test scripts. In this sample project,
                 "platformName" => "iOS",
                 "platformVersion" => "15",
                 "isRealMobile" => true,
-                "app" => "lt://APP100201841648802848885579",
+                "app" => "APP_URL",
                 "w3c" => true,
         } }
 ```
@@ -171,7 +166,7 @@ caps = {
             "platformName" => "Android",
             "platformVersion" => "11",
             "isRealMobile" => true,
-            "app" => "lt://APP10020521645537467103592",
+            "app" => "APP_URL",
             "w3c" => true,
         } }
 ```
@@ -183,7 +178,7 @@ caps = {
 **Info Note:**
 
 - You must add the generated **APP_URL** to the `"app"` capability in the config file.
-- You can generate capabilities for your test requirements with the help of our inbuilt **[Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/beta/index.html)**. A more Detailed Capability Guide is available [here](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/).
+- You can generate capabilities for your test requirements with the help of our inbuilt **[Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/)**. A more Detailed Capability Guide is available [here](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/).
 
 ## Executing The Tests
 
