@@ -35,9 +35,9 @@
 
 ## Pre-requisites
 
-Before you can start performing Ruby automation testing with Selenium, you would need to:
+Before you can start performing Ruby automation testing with Appium, you would need to:
 
-- Install **Ruby** and **gem** on your local system. Follow these instructions to install on different operating systems.
+- Install **Ruby** on your local system. Follow these instructions to install on different operating systems.
 
   - For **Windows**, you can download from the [official website](https://rubyinstaller.org/downloads/).
   - For **Linux** or **Ubuntu**, you can run a simple apt command like below:
@@ -71,15 +71,15 @@ Set LambdaTest `Username` and `Access Key` in environment variables.
 **For Linux/macOS:**
 
 ```js
-export LT_USERNAME="YOUR_LAMBDATEST_USERNAME" \
-export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+export LT_USERNAME=YOUR_LAMBDATEST_USERNAME \
+export LT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY
 ```
  
- **For Windows:**
+**For Windows:**
  
- ```js
-set LT_USERNAME="YOUR_LAMBDATEST_USERNAME" `
-set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+```js
+set LT_USERNAME=YOUR_LAMBDATEST_USERNAME `
+set LT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY
 ```
   
 ### Upload Your Application
@@ -147,12 +147,14 @@ You can update your custom capabilities in test scripts. In this sample project,
 ```ruby title="iOS(.ipa)"
  caps = {
             "LT:Options" => {
-                "deviceName" => "iPhone 13 Pro",
-                "platformName" => "iOS",
-                "platformVersion" => "15",
-                "isRealMobile" => true,
-                "app" => "APP_URL",
-                "w3c" => true,
+                :deviceName => "iPhone 13 Pro",  
+                :platformName => "iOS",
+                :platformVersion => "15",
+                :build => "Ruby Vanilla - iOS",
+                :name => "Ruby iOS Test",
+                :isRealMobile => true,
+                :app => "YOUR_APP_URL", #Enter the App (.ipa) URL here
+                :w3c => true,
         } }
 ```
 
@@ -162,12 +164,14 @@ You can update your custom capabilities in test scripts. In this sample project,
 ```ruby title="Android(.apk)"
 caps = {
             "LT:Options" => {
-            "deviceName" => "Galaxy S21",
-            "platformName" => "Android",
-            "platformVersion" => "11",
-            "isRealMobile" => true,
-            "app" => "APP_URL",
-            "w3c" => true,
+            :deviceName => "OnePlus 7",  
+            :platformName => "Android",
+            :platformVersion => "9",
+            :build => "Ruby Vanilla - Android",
+            :name => "Ruby Android Test",
+            :isRealMobile => true,
+            :app => "YOUR_APP_URL", #Enter the App (.apk) URL here
+            :w3c => true,
         } }
 ```
 
