@@ -6,18 +6,20 @@ require 'appium_lib'
  
         caps = {     
             "LT:Options" => {      
-            "deviceName" => "Galaxy S21",  
-            "platformName" => "Android",
-            "platformVersion" => "11",
-            "isRealMobile" => true,
-            "app" => "YOUR_APP_URL",
-            "w3c" => true,
+                :deviceName => "OnePlus 7",  
+                :platformName => "Android",
+                :platformVersion => "9",
+                :build => "Ruby Vanilla - Android",
+                :name => "Ruby Android Test",
+                :isRealMobile => true,
+                :app => "YOUR_APP_URL", #Enter the App URL here
+                :w3c => true,
         } }
 
         appium_driver = Appium::Driver.new({
             'caps' => caps,
             'appium_lib' => {
-                :server_url => "https://#{username}:#{accessToken}@mobile-hub.lambdatest.com/wd/hub"
+                :server_url => "http://"+username+":"+accessToken+"@mobile-hub.lambdatest.com/wd/hub"
             }}, true)
  
             driver = appium_driver.start_driver
@@ -39,17 +41,7 @@ require 'appium_lib'
             el6.click
             sleep(10)
             driver.back
-            el7 = driver.find_element(:id, "Browser")
-            el7.click
-            sleep(5)
-            el9 = driver.find_element(:id, "com.lambdatest.proverbial:id/url")
-            el9.click
-            el9.send_keys "https://www.lambdatest.com/"
-            el10 = driver.find_element(:id, "com.lambdatest.proverbial:id/find")
-            el10.click
-            sleep(5)
-            driver.back
-
+            
             puts "Found results - Test Passed"
 
             

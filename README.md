@@ -52,11 +52,6 @@ Before you can start performing Ruby automation testing with Selenium, you would
     brew install ruby
     ```
 
-- Ensure you have Dependency manager **bundler** installed. If not installed, you can install with the following command -
-
-  ```
-  gem install bundler
-  ```
 
 ### Clone The Sample Project
 
@@ -156,7 +151,7 @@ You can update your custom capabilities in test scripts. In this sample project,
                 "platformName" => "iOS",
                 "platformVersion" => "15",
                 "isRealMobile" => true,
-                "app" => "lt://APP100201841648802848885579",
+                "app" => "APP_URL",
                 "w3c" => true,
         } }
 ```
@@ -171,7 +166,7 @@ caps = {
             "platformName" => "Android",
             "platformVersion" => "11",
             "isRealMobile" => true,
-            "app" => "lt://APP10020521645537467103592",
+            "app" => "APP_URL",
             "w3c" => true,
         } }
 ```
@@ -183,7 +178,7 @@ caps = {
 **Info Note:**
 
 - You must add the generated **APP_URL** to the `"app"` capability in the config file.
-- You can generate capabilities for your test requirements with the help of our inbuilt **[Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/beta/index.html)**. A more Detailed Capability Guide is available [here](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/).
+- You can generate capabilities for your test requirements with the help of our inbuilt **[Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/)**. A more Detailed Capability Guide is available [here](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/).
 
 ## Executing The Tests
 
@@ -202,7 +197,7 @@ cd ios
 Execute the following command to run your test on LambdaTest platform:
 
 ```bash
-bundle exec rake first
+ruby ios-sample.rb
 ```
 
 </TabItem>
@@ -220,12 +215,37 @@ cd android
 Execute the following command to run your test on LambdaTest platform:
 
 ```bash
-bundle exec rake first
+ruby android-sample.rb
 ```
 
 </TabItem>
 
 </Tabs>
+
+**Info Note**
+In case of Windows, if you get any error message. Please try this method:
+
+1. Navigate to the corresponding directory based on your app.
+
+```bash
+cd android
+```
+2. Refresh the gem bundles through given command
+
+```bash
+gem uninstall -aIx
+```
+3. Re-install the gems required
+
+```bash
+gem install appium_lib -v 10.6.0
+gem install ffi
+```
+4. Now try running the corresponding automation script for your app.
+
+```bash
+ruby android-sample.rb
+```
 
 **Info:** Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on the :link: [LambdaTest App Automation Dashboard](https://appautomation.lambdatest.com/build).
 
