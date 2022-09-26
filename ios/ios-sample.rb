@@ -12,7 +12,7 @@ require 'appium_lib'
                 :build => "Ruby Vanilla - iOS",
                 :name => "Ruby iOS Test",
                 :isRealMobile => true,
-                :app => "YOUR_APP_URL", #Enter the App URL here
+                :app => "lt://proverbial-ios", #Enter the App URL here
                 :w3c => true,
         } }
 
