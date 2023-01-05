@@ -29,9 +29,9 @@ appium_driver = Appium::Driver.new({
 
     wait = Selenium::WebDriver::Wait.new(:timeout => 30)
 
-    wait.until {el1 = driver.find_element(:id, "color") }
+    el1 = driver.find_element(:id, "color")
     el1.click
-    wait.until {el2 = driver.find_element(:id, "geoLocation")}
+    el2 = driver.find_element(:id, "geoLocation")
     el2.click
     sleep(5)
     driver.back
