@@ -39,9 +39,9 @@ appium_driver = Appium::Driver.new({
     el3.click
     el4 = driver.find_element(:id, "notification")
     el4.click
-    el5 = driver.find_element(:id, "Toast")
+    el5 = driver.find_element(:id, "toast")
     el5.click
-    el6 = driver.find_element(:id, "speedTest")
+    el6 = driver.find_element(:id, "Speed Test")
     el6.click
     sleep(10)
     driver.back
