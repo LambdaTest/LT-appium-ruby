@@ -5,7 +5,7 @@ username= ENV["LT_USERNAME"] || "LT_Username" #Enter your username here
 accessToken= ENV["LT_ACCESS_KEY"] || "LT_AccessKey" #Enter your Access Key here
  
 caps = {     
-    "lt:pptions" => {      
+    "lt:options" => {      
         :deviceName => "iPhone 13 Pro",  
         :platformName => "iOS",
         :platformVersion => "15",
