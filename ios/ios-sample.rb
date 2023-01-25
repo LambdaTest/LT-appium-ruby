@@ -16,7 +16,7 @@ caps = {
         :app => "lt://proverbial-ios", #Enter the App URL here
         :w3c => true
     },
-    :platformName => "Android"
+    :platformName => "ios"
 }
 
 appium_driver = Appium::Driver.new({
