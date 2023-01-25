@@ -13,7 +13,7 @@ caps = {
         :build => "Ruby Vanilla - iOS",
         :name => "Ruby iOS Test",
         :isRealMobile => true,
-        :queueTimeout => 300,
+        :queueTimeout => 300,   
         :w3c => true
     },
     :platformName => "ios"
