@@ -253,6 +253,45 @@ ruby android-sample.rb
 
 **Info:** Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on the :link: [LambdaTest App Automation Dashboard](https://appautomation.lambdatest.com/build).
 
+### Troubleshooting
+
+If you encounter an issue where the gem installation fails with an error like `No such file or directory @ rb_sysopen`, you can resolve it by creating the required directory, setting up a custom gem path, or installing with administrator privileges.
+
+#### Option 1: Create the Missing Directory
+
+**macOS/Linux:**  
+Run the following command to create the required directory structure:
+```bash
+mkdir -p ~/.local/share/gem/ruby/<ruby_version>/cache
+```
+**Windows:**
+```bash
+mkdir -p %USERPROFILE%\.gem\ruby\<ruby version>\cache
+```
+#### Option 2: Set a Custom GEM Path
+**macOS/Linux:**
+```bash
+export GEM_HOME=$HOME/gems
+export PATH=$HOME/gems/bin:$PATH
+gem install appium_lib -v 10.6.0
+```
+**Windows:**
+```bash
+set GEM_HOME=%USERPROFILE%\gems
+set PATH=%USERPROFILE%\gems\bin;%PATH%
+gem install appium_lib -v 10.6.0
+```
+#### Option 3: Install with Administrator Privileges
+**macOS/Linux:**
+```bash
+sudo gem install appium_lib -v 10.6.0
+```
+**Windows:**
+Run Command Prompt as Administrator, then:
+```bash
+gem install appium_lib -v 10.6.0
+``` 
+
 ## Additional Links
 
 - [Advanced Configuration for Capabilities](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/)
