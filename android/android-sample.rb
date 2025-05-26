@@ -14,7 +14,8 @@ caps = {
         :isRealMobile => true,
         :queueTimeout => 300,
         :app => "lt://proverbial-android", #Enter the App URL here
-        :w3c => true
+        :w3c => true,
+        :autoGrantPermissions => true
     },
     :platformName => "Android"
 }
