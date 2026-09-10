@@ -13,7 +13,7 @@
 With TestMu AI (Formerly LambdaTest), you can run Appium tests in Ruby across real Android and iOS devices. This sample shows how to configure Ruby Appium tests to run on the TestMu AI Real Device Cloud.
 
 - [Sign up on TestMu AI](https://www.testmuai.com/register/) (Formerly LambdaTest).
-- Follow the [TestMu AI Documentation](https://www.testmuai.com/support/docs/appium-ruby/) for the full setup walkthrough.
+- Follow the [Run Appium tests with Ruby on TestMu AI](https://www.testmuai.com/support/docs/appium-ruby/) for the full setup walkthrough.
 
 ### Prerequisites
 
