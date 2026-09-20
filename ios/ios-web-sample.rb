@@ -1,5 +1,4 @@
 require 'rubygems'
-require 'appium_lib'
 require 'selenium-webdriver'
 
 username= ENV["LT_USERNAME"] || "LT_Username" #Enter your username here
@@ -19,11 +18,13 @@ caps = {
     :platformName => "ios"
 }
 
-driver = Selenium::WebDriver.for :remote,
-            :url => "https://"+username+":"+accessToken+"@mobile-hub.lambdatest.com/wd/hub",
-            :desired_capabilities => caps
+capabilities = Selenium::WebDriver::Remote::Capabilities.new(caps)
 
-    wait = Selenium::WebDriver::Wait.new(:timeout => 30)
+driver = Selenium::WebDriver.for :remote,
+            url: "https://"+username+":"+accessToken+"@mobile-hub.lambdatest.com/wd/hub",
+            capabilities: capabilities
+
+    wait = Selenium::WebDriver::Wait.new(timeout: 30)
     driver.navigate.to("https://mfml.in/api/getInfo")
     el1 = driver.find_element(:id => "resolution")
     el1.click
