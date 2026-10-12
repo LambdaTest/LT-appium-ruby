@@ -1,5 +1,7 @@
 # Run Appium Tests with Ruby on TestMu AI (Formerly LambdaTest)
 
+> Run End-to-End (E2E) testing with Appium and Ruby across real mobile devices and operating systems on the TestMu AI cloud.
+
 <p align="center">
   <a href="https://www.testmuai.com/"><img src="https://img.shields.io/badge/MADE%20BY%20TestMu%20AI-000000.svg?style=for-the-badge&labelColor=000" alt="Made by TestMu AI"></a>
   <a href="https://rubygems.org/gems/appium_lib"><img src="https://img.shields.io/gem/v/appium_lib.svg?style=for-the-badge&labelColor=000000" alt="appium_lib version"></a>
